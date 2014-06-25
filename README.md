@@ -82,7 +82,7 @@ require(['./config'], function(){
 </pre>
 
 
-Notice that  I'm not including jquery, even though we're using it for both colorbox, as well as in <code>/app/site.js</code>. We don't need to do this inside of main.js because we're already defining it inside of <code>config.js</code>. This allows us to define pre-requisite(s) for our plugins/files by using <pre>  shim: {
+Notice that  I'm not including jquery, even though we're using it for both colorbox, and <code>/app/site.js</code>. We don't need to do this inside of main.js because we're already defining it inside of <code>config.js</code>. This allows us to define pre-requisite(s) for our plugins/files by using <pre>  shim: {
         site: [
             'jquery'
         ]
