@@ -15,7 +15,7 @@ You can trigger the file watcher using the following command:
 (assuming you're in the build folder)
 <br />
 <pre>grunt watch</pre>
-Once the file watcher is initiated it will watch both <code>assets/js</code> and <code>assets/css</code> folders for any changes. Meaning if you change or add any files inside either of those folders, it will run the build tools and output the compiled file(s) in the respective <code>/dist</code>subfolder.
+Once the file watcher is initiated it will watch both <code>assets/js</code> and <code>assets/css</code> folders for any changes. Meaning if you change or add any files inside either of those folders, it will run the build tools and output the compiled file(s) in the respective <code>/dist</code> subfolder.
 
 Since the LESS compiler is fairly straight foward. lets talk a bit more about the JS compiler.
 
@@ -44,7 +44,7 @@ requirejs.config({
 
 This is our config file which we use to keep track of dependencies and other assets. 
 
-This is where bower comes into play. Using <code>bower install</code> we can safely pull new libs, plugins and automatically add them to our app, as well as the config file.  
+This is where bower comes into play. Using <code>bower install</code> we can safely generate new libs and plugins into our folder structure as well as automatically add them to our config file.  
 
 For example, lets <code>cd</code> to our build folder and run <code>bower install colorbox</code>
 
@@ -71,7 +71,7 @@ requirejs.config({
 });
 </pre>
 
-Now that we've updated our  <code>config.js</code> we need to tell the build tool which dependencies we're going to include in our production file. This is pretty simple and we do it inside of <code>/assets/js/main.js</code> which looks like this.
+Now that we've updated our  <code>config.js</code> we need to tell the build tool which assets we're going to include in our production file. This is pretty simple and we do it inside of <code>/assets/js/main.js</code> which looks like this.
 
 <pre>
 require(['./config'], function(){
@@ -83,7 +83,7 @@ require(['./config'], function(){
 </pre>
 
 
-Notice that  I'm not including jquery, even though we're using it for both colorbox, and <code>/app/site.js</code>. We don't need to do this inside of main.js because we're already defining it inside of <code>config.js</code>. This allows us to define pre-requisite(s) for our plugins/files using  <pre>  shim: {
+Notice that  I'm not including jquery, even though it's required for both colorbox, and <code>/app/site.js</code>. We don't need to do this inside of <code>main.js</code> because we're already defining it inside of <code>config.js</code>. This allows us to define dependencies for our plugins/files using:  <pre>  shim: {
         site: [
             'jquery'
         ]
@@ -94,7 +94,7 @@ Assuming that the changes you make are error free, and you save <code>/assets/js
 
 <h3>Deubgging JS</h3>
 
-So we've now covered how we can manage our JS dependencies and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
+So we've now covered how we can manage our JS assets and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
 Inside of index.php I've included a very basic conditional script that looks for a querysting <code>yourdomain.com/?dev</code>. 
 
