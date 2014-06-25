@@ -1,5 +1,5 @@
 //////////////////////////////////////////////
-// TEXTUREFAB.COM CSS & JS BUILD TOOL
+// CSS & JS BUILD TOOL
 // Written By Mason Berkshire
 // TODO: CREATE UNIT TEST via PhantomJS and QUnit
 //////////////////////////////////////////////
