@@ -1,0 +1,1 @@
+start cmd /k node r.js -o build.js
