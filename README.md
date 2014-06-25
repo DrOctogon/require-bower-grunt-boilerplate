@@ -19,7 +19,7 @@ Once the file watcher is initiated it will watch both <code>assets/js</code> and
 
 Since the LESS compiler is fairly straight foward. lets talk a bit more about the JS compiler.
 
-<h3>Javascript Managment</h3>
+<h3>Javascript Management</h3>
 This system is using both <b>bower</b> and <b>requirejs</b> to help manage the js dependencies.
 
 lets take a look at <code>/assets/js/config.js</code>
