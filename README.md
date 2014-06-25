@@ -83,18 +83,18 @@ require(['./config'], function(){
 </pre>
 
 
-Notice that  I'm not including jquery, even though we're using it for both colorbox, and <code>/app/site.js</code>. We don't need to do this inside of main.js because we're already defining it inside of <code>config.js</code>. This allows us to define pre-requisite(s) for our plugins/files by using <pre>  shim: {
+Notice that  I'm not including jquery, even though we're using it for both colorbox, and <code>/app/site.js</code>. We don't need to do this inside of main.js because we're already defining it inside of <code>config.js</code>. This allows us to define pre-requisite(s) for our plugins/files using  <pre>  shim: {
         site: [
             'jquery'
         ]
     },
 </pre>.
 
-Assuming that the changes you make are error free, and you save <code>/assets/js/main.js</code> your compiled and production ready js file will be placed inside <code>/assets/js/dist</code>
+Assuming that the changes you make are error free, and you save <code>/assets/js/main.js</code> your production ready js file will be placed inside <code>/assets/js/dist/</code>
 
 <h3>Deubgging JS</h3>
 
-So we've now covered how we can manage our JS dependencies and get it ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
+So we've now covered how we can manage our JS dependencies and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
 Inside of index.php I've included a very basic conditional script that looks for a querysting <code>yourdomain.com/?dev</code>. 
 
