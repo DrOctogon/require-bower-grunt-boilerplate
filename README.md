@@ -1,7 +1,7 @@
 require-bower-grunt-boilerplate
 ===============================
 
-A boilerplate for a front-end build system a setup using requirejs, bower, gruntjs and of course LESS
+A boilerplate for a front-end build system setup using requirejs, bower, gruntjs and of course LESS
 
 You must have nodejs installed in order to use this tool.  http://nodejs.org/
 
