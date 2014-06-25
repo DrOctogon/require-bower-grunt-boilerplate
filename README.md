@@ -107,7 +107,7 @@ if(false !== strpos($url,'dev')) {
 }
 </pre>
 
-By placing this querystring on the end of your URL, you're telling require to load each script thats defined inside of <code>/assets/js/main.js</code> separately. And of course to revert to production simply remove the <code>?dev</code> querystring. 
+By placing this querystring on the end of your URL, you're telling require to load each script thats defined inside of <code>/assets/js/main.js</code> separately. To revert to production simply remove the <code>?dev</code> querystring. 
 
 <h2>Other Defined Grunt Tasks</h2>
 
