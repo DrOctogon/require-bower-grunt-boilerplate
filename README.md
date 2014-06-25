@@ -92,7 +92,7 @@ Notice that  I'm not including jquery, even though we're using it for both color
 
 Assuming that the changes you make are erorr free, and you save <code>/assets/js/main.js</code> your compiled and production ready js file will be placed inside <code>/assets/js/dist</code>
 
-<h2>Deubgging JS</h2>
+<h3>Deubgging JS</h3>
 
 So we've now covered how we can manage our JS dependencies and get it ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
@@ -110,7 +110,7 @@ if(false !== strpos($url,'dev')) {
 
 By placing this querystring on the end of your URL, you're telling require to load each script thats defined inside of <code>/assets/js/main.js</code> separately. To revert to production simply remove the <code>?dev</code> querystring. 
 
-<h2>Other Defined Grunt Tasks</h2>
+<h3>Other Defined Grunt Tasks</h3>
 
 I've created a number of other commands that mimick the watcher, to help troubleshoot, or get a different output.
 
