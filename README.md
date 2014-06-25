@@ -44,11 +44,11 @@ requirejs.config({
 
 This is our config file which we use to keep track of dependencies and other assets. 
 
-This is where bower comes into play. Using <code>bower install</code> we can safely pull new libs and plugins and automatically add them to our app, as well as the config file.  
+This is where bower comes into play. Using <code>bower install</code> we can safely pull new libs, plugins and automatically add them to our app, as well as the config file.  
 
 For example, lets <code>cd</code> to our build folder and run <code>bower install colorbox</code>
 
-The file watcher will recognize these changes update the config file to look like this.
+The file watcher will recognize these changes and update the config file to look like this.
 
 <pre>
 requirejs.config({
