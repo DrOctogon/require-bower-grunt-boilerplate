@@ -92,7 +92,7 @@ Notice that  I'm not including jquery, even though it's required for both colorb
 
 Assuming that the changes you make are error free, and you save <code>/assets/js/main.js</code> your production ready js file will be placed inside <code>/assets/js/dist/</code>
 
-<h3>Deubgging JS</h3>
+<h3>Debugging JS</h3>
 
 So we've now covered how we can manage our JS assets and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
