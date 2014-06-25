@@ -11,7 +11,7 @@
     <script src="assets/js/lib/modernizr.js" type="text/javascript"></script>
     <link  href="assets/css/dist/app.min.css?v=2" rel="stylesheet">
     <!--[if lt IE 9]>
-    <script src="/assets/js/html5shiv.js" type='text/javascript'></script>
+    <script src="assets/js/html5shiv.js" type='text/javascript'></script>
     <![endif]-->
 </head>
 <body>
