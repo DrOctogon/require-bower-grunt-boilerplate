@@ -90,7 +90,7 @@ Notice that  I'm not including jquery, even though we're using it for both color
     },
 </pre>.
 
-Assuming that the changes you make are erorr free, and you save <code>/assets/js/main.js</code> your compiled and production ready js file will be placed inside <code>/assets/js/dist</code>
+Assuming that the changes you make are error free, and you save <code>/assets/js/main.js</code> your compiled and production ready js file will be placed inside <code>/assets/js/dist</code>
 
 <h3>Deubgging JS</h3>
 
