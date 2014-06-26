@@ -35,3 +35,4 @@ if(false !== strpos($url,'dev')) { ?>
 <script src="assets/js/require.min.js"></script>
 <script src="assets/js/dist/main.min.js?v=1"></script>
 <?php }  ?>
+</html>
