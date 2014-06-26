@@ -96,7 +96,7 @@ Assuming that the changes you make are error free, and you save <code>/assets/js
 
 So we've now covered how we can manage our JS assets and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
-Inside of index.php I've included a very basic conditional script that looks for a querysting <code>yourdomain.com/?dev</code>. 
+Inside of index.php I've included a very basic conditional script that looks for a querysting <code>yourdomain.com/?dev</code>
 
 <pre>
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -121,10 +121,20 @@ To compile your LESS into unminfied css, run:
 To compile your LESS like the watcher, run:
 <pre>grunt less:prod</pre>
 
-To compile your JS like the watcher, run
+To compile your JS like the watcher, run:
 <pre>grunt buildjs</pre>
+
+To update your <code>config.js</code> file with any new bower updates without the watcher, run:
+<pre>grunt package</pre>
 
 
 You can make edits to the watcher, and other grunt processes via <pre>/build/gruntfile.js</pre>
 
 For windows users, I've also included batch files inside of <code>/build</code> that run the node commands.
+
+<h3>Cool tricks</h3>
+
+For those not to fimilar with bower, try checking out their package list.
+
+http://bower.io/search/
+
