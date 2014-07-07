@@ -1,7 +1,6 @@
 //////////////////////////////////////////////
 // CSS & JS BUILD TOOL
 // Written By Mason Berkshire
-// TODO: CREATE UNIT TEST via PhantomJS and QUnit
 //////////////////////////////////////////////
 
 module.exports = function(grunt) {
@@ -41,6 +40,9 @@ module.exports = function(grunt) {
                 }
             }
         },
+        qunit: {
+            all: ['../tests/**/*.html']
+        },
         watch: {
             requirejs: {
                 files: ['../assets/js/**/*.js', '!../assets/js/dist**/*.js'],
@@ -53,6 +55,11 @@ module.exports = function(grunt) {
             css: {
                 files: ['../assets/css/*.less' , '!../assets/css/dist**/*.css'],
                 tasks: ['less:prod']
+            },
+           test: {
+                files: ['../tests/*.js', '../tests/*.html'],
+                all: ['../tests/**/*.html'],
+                tasks: ['qunit:all']
             }
         }
     });
@@ -60,6 +67,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.registerTask('test' , ['qunit:all']);
     grunt.registerTask('package', [ 'bower:target' ]);
     grunt.registerTask('buildjs', [ 'requirejs' ]);
     grunt.registerTask('dev', [ 'less:dev' ]);
