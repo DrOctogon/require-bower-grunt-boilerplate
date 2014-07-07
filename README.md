@@ -110,6 +110,13 @@ if(false !== strpos($url,'dev')) {
 
 By placing this querystring on the end of your URL, you're telling require to load each script thats defined inside of <code>/assets/js/main.js</code> separately. To revert to production simply remove the <code>?dev</code> querystring. 
 
+
+<h3>JS Unit Tests</h3>
+
+I've setup a JS unit testing folder, which can be found here: <code>/tests/</code>. Inside of this folder, we can add unit tests using the popular unit testing framework <code>qunit</code>. These tests will run in the headless browser <code>phantom.js</code> and can be initiated by using <code>grunt watch</code> or <code>grunt test</code>. 
+
+If you end up using <code>grunt watch</code> for unit tesing, it will watch the <code>/tests</code> folder and re-run the unit tests upon any change.
+
 <h3>Other Defined Grunt Tasks</h3>
 
 I've created a number of other commands that mimick the watcher, to help troubleshoot, or get a different output.
@@ -124,8 +131,12 @@ To compile your LESS like the watcher, run:
 To compile your JS like the watcher, run:
 <pre>grunt buildjs</pre>
 
+
 To update your <code>config.js</code> file with any new bower updates without the watcher, run:
 <pre>grunt package</pre>
+
+To run unit tests via the /tests/ folder, run:
+<pre>grunt test</pre>
 
 
 You can make edits to the watcher, and other grunt processes via <pre>/build/gruntfile.js</pre>
