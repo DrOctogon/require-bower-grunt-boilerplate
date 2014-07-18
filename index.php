@@ -24,8 +24,6 @@
 <footer>
     This is your footer container
 </footer>
-
-</body>
 <?php
 // TODO ADD COOKIE TO TRACK CURRENT ENVIRONMENT SETTING DOMAIN WIDE
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -35,4 +33,5 @@ if(false !== strpos($url,'dev')) { ?>
 <script src="assets/js/require.min.js"></script>
 <script src="assets/js/dist/main.min.js?v=1"></script>
 <?php }  ?>
+</body>
 </html>
