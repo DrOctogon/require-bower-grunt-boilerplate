@@ -18,7 +18,5 @@
     "tests"
   ],
   "dependencies": {
-    "moment": "~2.7.0",
-    "colorbox": "~1.5.9"
   }
 }
