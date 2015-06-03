@@ -96,9 +96,10 @@ Assuming that the changes you make are error free, and you save <code>/assets/js
 
 So we've now covered how we can manage our JS assets and get them ready for production. Lets talk about how we can troubleshoot/debug any issues we run into along the way.
 
-Inside of index.php I've included a very basic conditional script that looks for a querysting <code>yourdomain.com/?dev</code>
+below I've provided a very basic php conditional script that looks for a querysting <code>yourdomain.com/?dev</code>. 
 
-<pre>
+
+```html
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 if(false !== strpos($url,'dev')) { 
 <script data-main="assets/js/main.js"  src="assets/js/require.min.js"></script>
@@ -106,10 +107,14 @@ if(false !== strpos($url,'dev')) {
 <script src="assets/js/require.min.js"></script>
 <script src="assets/js/dist/main.min.js?v=1"></script>
 }
-</pre>
+```
 
-By placing this querystring on the end of your URL, you're telling require to load each script thats defined inside of <code>/assets/js/main.js</code> separately. To revert to production simply remove the <code>?dev</code> querystring. 
+<p>By using the data-main attribute inside of the require.min.js script tag and pointing it to the main.js file, requirejs will load each dependency individually.</p>
 
+```html
+<script data-main="assets/js/main.js"  src="assets/js/require.min.js"></script>
+```
+<p>Having each script load individually will make it much easier to pin point any errors being returned</p>
 
 <h3>JS Unit Tests</h3>
 
